@@ -15,4 +15,19 @@ public class StatisticsService {
                 current_max = income;
         return current_max;
     }
+
+    public int findMinMonth(int[] month){
+        int monthMin = month[0];
+        int counterMonth = 0;
+        int returnMonth = 1;
+        for(int x : month){
+            counterMonth++;
+            if(monthMin >= x){
+                monthMin = x;
+                returnMonth = counterMonth;
+            }
+        }
+        return returnMonth;
+    }
+
 }
